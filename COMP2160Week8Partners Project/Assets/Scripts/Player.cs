@@ -30,6 +30,6 @@ public class Player : MonoBehaviour
         float movementX = movement.ReadValue<Vector2>().x;
         float movementY = movement.ReadValue<Vector2>().y;
 
-        transform.Translate(movementX * movementSpeed * Time.deltaTime, movementY * movementSpeed * Time.deltaTime, 0, Space.Self);
+        transform.Translate(movementX * movementSpeed * Time.deltaTime, 0, movementY * movementSpeed * Time.deltaTime, Space.World);
     }
 }
