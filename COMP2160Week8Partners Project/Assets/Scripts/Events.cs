@@ -6,9 +6,9 @@ using UnityEngine.Events;
 
 public class Events : MonoBehaviour
 {
-    static Events instance;
+    public static Events instance;
 
-    UnityEvent<int> CoinCollect;
+    public UnityEvent<int> CoinCollect;
 
     private void Awake()
     {
@@ -16,5 +16,10 @@ public class Events : MonoBehaviour
             instance = this;
         else
             Destroy(this);
+    }
+
+    public void TestInvokeCoin10()
+    {
+        CoinCollect?.Invoke(10);
     }
 }
